@@ -32,9 +32,9 @@ app.post("/ruta-2",async (req,res)=>{
     const nombre = filter.name;//obtener solo nombre de redis
     const response= await fil(nombre);//funcion filtrar
     if((JSON.parse(response))==='null'){
-        res.status(200);
-    }else{
         res.status(404);
+    }else{
+        res.status(200);
     }
     res.json(JSON.parse(response));//de string a objeto     
 });
